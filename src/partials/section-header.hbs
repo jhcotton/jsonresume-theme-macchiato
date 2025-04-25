@@ -22,6 +22,8 @@
             {{else}}
             <span class="endDate"> - Present</span>
             {{/if}}
+        {{else if endDate}}
+            {{formatDate endDate}}
         {{else if releaseDate}}
             {{formatDate releaseDate}}
         {{/if}}
