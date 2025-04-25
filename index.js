@@ -13,14 +13,13 @@ handlebars.registerHelper({
   eq: (a, b) => a === b,
 });
 
-handlebars.registerHelper("formatDate", function(date) {
-  onlyYear = moment(date, 'YYYY', true)
+handlebars.registerHelper('formatDate', date => {
+  const onlyYear = moment(date, 'YYYY', true);
   if (onlyYear.isValid()) {
     // Ensure correct date
-    return moment(date, 'YYYY').format('YYYY')
-  } else {
-    return moment(date).format('MM/YYYY')
+    return moment(date, 'YYYY').format('YYYY');
   }
+  return moment(date).format('MM/YYYY');
 });
 
 function render(resume) {
