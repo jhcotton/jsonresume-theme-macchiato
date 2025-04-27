@@ -9,9 +9,17 @@ handlebars.registerHelper({
   // Arguments: {address, city, subdivision, postalCode, countryCode}
   // formatAddress: (...args) => addressFormat(args).join(' '),
   formatAddress: (...args) => args.filter(arg => typeof arg !== 'object').join(' '),
-  formatDate: date => moment(date).format('MM/YYYY'),
   lowercase: s => s.toLowerCase(),
   eq: (a, b) => a === b,
+});
+
+handlebars.registerHelper('formatDate', date => {
+  const onlyYear = moment(date, 'YYYY', true);
+  if (onlyYear.isValid()) {
+    // Ensure correct date
+    return moment(date, 'YYYY').format('YYYY');
+  }
+  return moment(date).format('MM/YYYY');
 });
 
 function render(resume) {
