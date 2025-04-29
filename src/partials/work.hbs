@@ -4,10 +4,12 @@
 
     {{#each resume.work}}
         <section class="item">
-            {{> section-header name=this.company }}
-
             {{#if position}}
-            <h4>{{position}}</h4>
+            {{> section-header name=this.position showWebsite=true}}
+            {{/if}}
+
+            {{#if company}}
+            <h4>{{company}}</h4>
             {{/if}}
 
             {{#if keywords.length}}
