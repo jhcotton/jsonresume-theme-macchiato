@@ -3,6 +3,7 @@
 Macchiato it's a [JSON Resume](https://jsonresume.org/) theme based on [Theme Boilerplate](https://github.com/jsonresume/jsonresume-theme-boilerplate) and [Caffeine Theme](https://github.com/kelyvin/jsonresume-theme-caffeine).
 
 ## Changes from Forked Theme Repo 
+- Detached fork to make pull-requests easier
 - Using endDate as the only display date
 - Formatting dates with only years given
 - Adding highlights to Education section
