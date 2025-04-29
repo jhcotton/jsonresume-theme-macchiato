@@ -6,6 +6,8 @@ Macchiato it's a [JSON Resume](https://jsonresume.org/) theme based on [Theme Bo
 - Using endDate as the only display date
 - Formatting dates with only years given
 - Adding highlights to Education section
+- Swapping Position and Company headers, following the format: Position - Company - Date
+- "@" symbol in usernames for social profiles
 
 ## Why?
 
